@@ -2,7 +2,8 @@
 
 Elasticsearch 1.7.2
 
-Commands
+Commands:
+---------
 
 sudo su
 
@@ -30,7 +31,8 @@ cd /etc/elasticsearch
 
 nano elasticsearch.yml
 
-Config
+Config:
+-------
 
 cluster.name: awstutorialseries
 
@@ -48,13 +50,15 @@ http.cors.enabled: true
 
 http.cors.allow-origin: "*"
 
-Commands
+Commands:
+---------
 
 service elasticsearch start
 
 Logstash 1.5.4-1
 
-Commands
+Commands:
+--------
 
 sudo su
 
@@ -70,17 +74,20 @@ rm -f logstash-1.5.4-1.noarch.rpm
 
 nano /etc/logstash/conf.d/logstash.conf
 
-Config
+Config:
+-------
 
 input { file { path => "/tmp/logstash.txt" } } output { elasticsearch { host => "ELASTICSEARCH_URL_HERE" protocol => "http" } }
 
-Commands
+Commands:
+---------
 
 service logstash start
 
 Kibana 4.1.2
 
-Commands
+Commands:
+--------
 
 sudo su
 
@@ -98,11 +105,13 @@ cd kibana-4.1.2-linux-x64
 
 nano config/kibana.yml
 
-Config
+Config:
+-------
 
 elasticsearch_url: "ELASTICSEARCH_URL_HERE"
 
-Commands
+Commands:
+--------
 
 nohup ./bin/kibana &
 
